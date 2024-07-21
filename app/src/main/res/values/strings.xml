@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Login UI Design</string>
+    <string name="login">Login</string>
+    <string name="email">Email</string>
 </resources>

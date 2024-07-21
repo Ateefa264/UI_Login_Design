@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:content=".MainActivity">
 
     <!--    <ImageView-->
 <!--        android:id="@+id/backgroundImageView1"-->
@@ -26,12 +26,14 @@
         android:layout_height="600dp"
         android:layout_marginEnd="200dp"
         android:src="@drawable/vector"
+        android:contentDescription="@string/app_name"
         app:layout_constraintBottom_toTopOf="@id/orConnectWithTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.346"
+        app:layout_constraintHorizontal_bias="0.331"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="VisualLintBounds" />
 
     <TextView
         android:id="@+id/loginTitle"
@@ -39,32 +41,36 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="140dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Login"
+        android:text="@string/login"
         android:textColor="@android:color/white"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextContrastCheck" />
 
 
     <EditText
         android:id="@+id/emailEditText"
         android:layout_width="300dp"
         android:layout_height="50dp"
-        android:hint="Email"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:background="@drawable/edit_text_background"
         android:drawableLeft="@drawable/ic_email"
         android:drawableRight="@drawable/tick"
         android:drawablePadding="20dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
         android:paddingLeft="40dp"
         android:paddingRight="30dp"
-        android:background="@drawable/edit_text_background"
         android:textColor="@android:color/black"
         android:textColorHint="@color/lighterGray"
-        app:layout_constraintTop_toBottomOf="@id/loginTitle"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="20dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginTitle"
+        tools:ignore="RtlHardcoded,TextContrastCheck" />
 
     <EditText
         android:id="@+id/passwordEditText"
@@ -73,16 +79,18 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/edit_text_background"
         android:drawableLeft="@drawable/ic_password"
-        android:drawablePadding="20dp"
-        android:hint="Password"
+        android:drawableRight="@drawable/group"
+        android:hint="    Password"
         android:inputType="textPassword"
         android:paddingLeft="40dp"
+        android:paddingRight="20dp"
         android:textColor="@android:color/black"
         android:textColorHint="@color/lighterGray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/emailEditText" />
+        app:layout_constraintTop_toBottomOf="@id/emailEditText"
+        tools:ignore="Autofill,HardcodedText,TextContrastCheck,TextContrastCheck" />
 
     <Button
         android:id="@+id/loginButton"
@@ -96,7 +104,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordEditText" />
+        app:layout_constraintTop_toBottomOf="@id/passwordEditText"
+        tools:ignore="DuplicateSpeakableTextCheck,HardcodedText" />
 
     <TextView
         android:id="@+id/forgotPasswordTextView"
@@ -107,7 +116,8 @@
         android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/loginButton" />
+        app:layout_constraintTop_toBottomOf="@id/loginButton"
+        tools:ignore="HardcodedText,TextContrastCheck" />
 
     <TextView
         android:id="@+id/orConnectWithTextView"
@@ -119,10 +129,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/forgotPasswordTextView" />
+        app:layout_constraintTop_toBottomOf="@id/forgotPasswordTextView"
+        tools:ignore="HardcodedText" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
+        style="?android:attr/buttonBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
@@ -133,17 +145,20 @@
 
         <Button
             android:id="@+id/facebookButton"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="180dp"
             android:layout_height="50dp"
-            android:layout_marginEnd="10dp"
+            android:layout_marginEnd="20dp"
             android:backgroundTint="@color/sky"
             android:drawableLeft="@drawable/ic_facebook"
             android:drawablePadding="10dp"
             android:text="Facebook"
-            android:textColor="@android:color/white" />
+            android:textColor="@android:color/white"
+            tools:ignore="HardcodedText,RtlHardcoded,TextContrastCheck" />
 
         <Button
             android:id="@+id/twitterButton"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="180dp"
             android:layout_height="50dp"
             android:backgroundTint="@color/login"
@@ -159,7 +174,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="92dp"
         android:text="Don't have account? "
-        android:textColor="@color/gray"
+        android:textColor="#546E7A"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.443"
