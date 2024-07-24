@@ -11,8 +11,8 @@ This project is an Android application that showcases a modern login screen UI. 
 - **Responsive Design**: Ensures compatibility across different screen sizes.
 
 ## Screenshots
+![UI_Login](https://github.com/user-attachments/assets/ffd37db5-ef76-4377-a826-41ce0fb60fcf)
 
-![Login Screen](https://github.com/user-attachments/assets/928845ef-7801-44aa-8d15-4d6b08e5d523)
 
 ## UI Design
 
